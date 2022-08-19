@@ -1,0 +1,52 @@
+
+
+
+ <!-- <div class="mb-3">
+    <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
+    <p-button type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
+    <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>
+</div> -->
+
+
+ 
+<p-table [value]="empData"  class="some-custom-class-name" styleClass="p-datatable-striped p-datatable-gridlines" responsiveLayout="scroll" [paginator]="true" [rows]="rows" [showCurrentPageReport]="true" [(first)]="first" responsiveLayout="scroll"
+currentPageReportTemplate="Showing {{first}} to {{rows}} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Company</th>
+        <th>Designation</th>
+        <th>Company Logo</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body"  let-empdata >
+        <tr (click)="onSelect(empdata)">
+            <td>{{empdata.id}}</td>
+            <td>{{empdata.name}}</td>
+            <td>{{empdata.company}}</td>
+            <td>{{empdata.designation}}</td>
+           <td> <img [src]="empdata.company_logo" class="logo"></td>
+        </tr>
+    </ng-template>
+</p-table> 
+
+
+
+<!-- <table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Company</th>
+    <th>Designation</th>
+    <th>Company Logo</th>
+    </tr>
+    <tr *ngFor="let empdata of empData" (click)="onSelect('details')">
+        <td>{{empdata.id}}</td>
+        <td>{{empdata.name}}</td>
+        <td>{{empdata.company}}</td>
+        <td>{{empdata.designation}}</td>
+       <td>{{empdata.company_logo}}</td>
+    </tr>
+
+</table> -->

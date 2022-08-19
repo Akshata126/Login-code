@@ -1,0 +1,22 @@
+.some-custom-class-name::ng-deep th {
+    background-color: rgb(108, 108, 139) !important;
+font-size: 16px;
+font-weight: 600!important;
+color: rgb(244, 237, 237)!important;
+
+}
+
+.some-custom-class-name::ng-deep td{
+   
+    font-size: 12px;
+font-weight: 600!important;
+}
+.p-table{
+    margin-top: 20px !important;
+
+}
+
+.logo{
+    width: 10%;
+    height: 10%;
+}

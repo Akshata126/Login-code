@@ -1,0 +1,59 @@
+.card{
+    height    : 50%;
+    position  : relative;
+    margin-top: 50px;
+    width: 60%;
+    margin-left: 250px;
+}
+
+.card-body p{
+    font-size: 14px;
+    color:#6f6b6b;
+    font-weight: 600;
+    
+   
+
+}
+.logo{
+    width: 30%;
+    height: 30%;
+}
+
+.card .card-body .card:hover .card-body .overlay{
+    display: block;
+}
+
+.card .card-body .card .card-body{
+    padding: 30px;
+}
+
+.card-header h3{
+    color      :rgb(92, 129, 186);
+    margin-top : 10px;
+    font-weight: 600;
+}
+
+.card .card-body .card .card-body .overlay{
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    display         : none;
+    position        : absolute;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.card .card-body .card .card-body .overlay a{
+    top          : 40%;
+    left         : 19%;
+    color        : #fff;
+    border       : 1px solid #fff;
+    cursor       : pointer;
+    padding      : 5px 25px;
+    position     : absolute;
+    border-radius: 10px;
+}
+
+.loader .fa-spinner{
+    color: #5B2067;   
+}
